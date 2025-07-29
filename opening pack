@@ -1,0 +1,134 @@
+(function () {
+  const currentUser = localStorage.getItem('fooditOfficialCurrentUser');
+  if (!currentUser) {
+    alert('No user is currently logged in.');
+    return;
+  }
+
+  const users = JSON.parse(localStorage.getItem('fooditOfficialStorage') || '{}');
+  const user = users[currentUser];
+  if (!user) {
+    alert('User data not found.');
+    return;
+  }
+
+  const PACK_COST = {
+    milk: 30,
+    space: 30,
+    school: 50
+  };
+
+  const milkPack = [
+      { name: "Banana Milk", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fthumbnails_bananaMilk.png?1750440374803", rarity: "uncommon", chance: 30 },
+      { name: "Strawberry Milk", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fthumbnails_strawberryMilk.png?1750440380485", rarity: "uncommon", chance: 25 },
+      { name: "Blueberry Milk", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fthumbnails_blueberryMilk.png?1750440387664", rarity: "rare", chance: 15 },
+      { name: "Grape Milk", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fthumbnails_grapeMilk.png?1750440406384", rarity: "rare", chance: 10 },
+      { name: "Chocolate Milk", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fthumbnails_chocolateMilk.png?1750440422676", rarity: "epic", chance: 8 },
+      { name: "Bubble Gum Milk", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fthumbnails_bubblegumMilk.png?1750440430356", rarity: "chroma", chance: 1 },
+      { name: "Warriet Milk", img: "https://i.postimg.cc/wB35wMNV/Warriet-Milk.png", rarity: "legendary", chance: 0.5 },
+      { name: "Cat Milk", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2FcatMilk.png?1750455696008", rarity: "unique", chance: 0.3 },
+      { name: "Cotton Candy Milk", img: "https://i.postimg.cc/mhWPz0Px/cottoncandy-Milk.png", rarity: "chroma", chance: 1 },
+    ];
+
+    const spacePack = [
+      { name: "Moon", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fmoon.png?1750451519920", rarity: "uncommon", chance: 30 },
+      { name: "Asteroid", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fasteroid.png?1750526345816", rarity: "uncommon", chance: 25 },
+      { name: "Saturn", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fsaturn%20(1).png?1750526475085", rarity: "rare", chance: 20 },
+      { name: "Black Hole", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2FblackHole.png?1750526520003", rarity: "uncommon", chance: 10 },
+      { name: "Mars", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fmars.png?1750526570761", rarity: "rare", chance: 10 },
+      { name: "Sun", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fsun.png?1750526580706", rarity: "epic", chance: 4 },
+      { name: "Astronaut", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fastronaut.png?1750451907761", rarity: "legendary", chance: 3 },
+      { name: "Meteoroids", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fmeteoroids.png?1750526681842", rarity: "chroma", chance: 1 },
+      { name: "Rainbow Saturn", img: "https://i.postimg.cc/RVW0BYps/rainbow-Saturn.gif", rarity: "mystical", chance: 0.7 },
+      { name: "Constellation", img: "https://i.postimg.cc/Cxfdj2jB/constellation.gif", rarity: "heavenly", chance: 0.2 },
+    ];
+
+    const schoolPack = [ 
+      { name: "Pencil", img: "https://i.postimg.cc/9rcNCPM2/pencil.png", rarity: "uncommon", chance: 30 },
+      { name: "Pencil Pouch", img: "https://i.postimg.cc/wtnGpSt4/pencil-Pouch.png", rarity: "uncommon", chance: 25 },
+      { name: "Notebook Paper", img: "https://i.postimg.cc/y3yQ0xL2/notebook-Paper.png", rarity: "rare", chance: 20 },
+      { name: "Note Pad", img: "https://i.postimg.cc/rdDP78pt/notePad.png", rarity: "rare", chance: 10 },
+      { name: "Markers", img: "https://i.postimg.cc/4n6FD2Xw/markers.png", rarity: "epic", chance: 5 },
+      { name: "Crayons", img: "https://i.postimg.cc/Vd4Z6SrC/crayons.png", rarity: "epic", chance: 4 },
+      { name: "Teachers Cup", img: "https://i.postimg.cc/8JWnPtMp/teachers-Cup.png", rarity: "legendary", chance: 3 },
+      { name: "Chalkboard", img: "https://i.postimg.cc/H8gvJX9Q/chalkboard.png", rarity: "legendary", chance: 2 },
+      { name: "Teachers Desk", img: "https://i.postimg.cc/tsScr19j/teachers-Desk.png", rarity: "chroma", chance: 0.8 },
+    ];
+  };
+
+  // UI
+  const ui = document.createElement('div');
+  ui.style = `
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #111;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+    font-family: Arial;
+    font-size: 14px;
+    z-index: 9999;
+    box-shadow: 0 0 15px lime;
+    border: 2px solid lime;
+    max-width: 320px;
+  `;
+  ui.innerHTML = `
+    <strong style="font-size: 16px;">🛠 Cheat Pack Opener</strong><br><br>
+    <label>Pack:
+      <select id="cheat-pack" style="width: 100%; padding: 6px;">
+        <option value="milk">Milk</option>
+        <option value="space">Space</option>
+        <option value="school">School</option>
+      </select>
+    </label><br><br>
+    <label>Amount:
+      <input id="cheat-amount" type="number" value="1" min="1" style="width: 100%; padding: 6px;">
+    </label><br><br>
+    <button id="cheat-open" style="width: 100%; background: lime; color: black; padding: 10px; font-weight: bold; border-radius: 6px; border: none;">Open Pack(s)</button>
+    <div id="cheat-result" style="margin-top: 10px;"></div>
+  `;
+  document.body.appendChild(ui);
+
+  // Logic
+  document.getElementById('cheat-open').onclick = () => {
+    const pack = document.getElementById('cheat-pack').value;
+    const amount = parseInt(document.getElementById('cheat-amount').value);
+    const cost = PACK_COST[pack] * amount;
+
+    if (user.tokens < cost) {
+      alert(`You need ${cost} tokens, but only have ${user.tokens}`);
+      return;
+    }
+
+    const results = [];
+    for (let i = 0; i < amount; i++) {
+      const rand = Math.random();
+      let sum = 0;
+      let reward = packs[pack][packs[pack].length - 1];
+      for (const blook of packs[pack]) {
+        sum += blook.chance / 100;
+        if (rand <= sum) {
+          reward = blook;
+          break;
+        }
+      }
+      user.blooks = user.blooks || [];
+      user.blooks.push(reward);
+      results.push(reward.name);
+    }
+
+    user.tokens -= cost;
+    user.packsOpened = (user.packsOpened || 0) + amount;
+    users[currentUser] = user;
+    localStorage.setItem('fooditOfficialStorage', JSON.stringify(users));
+
+    const display = document.getElementById('token-count');
+    if (display) display.textContent = user.tokens.toLocaleString('en-US');
+
+    document.getElementById('cheat-result').textContent = `✅ You got: ${results.join(', ')}`;
+  };
+
+  console.log('%c✅ Cheat code enabled: Open packs manually in bottom-right box.', 'color: limegreen; font-weight: bold;');
+})();
+
