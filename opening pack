@@ -1,11 +1,11 @@
 (function () {
-  const currentUser = localStorage.getItem('fooditOfficialCurrentUser');
+  const currentUser = localStorage.getItem('fooditNewStorage');
   if (!currentUser) {
     alert('No user is currently logged in.');
     return;
   }
 
-  const users = JSON.parse(localStorage.getItem('fooditOfficialStorage') || '{}');
+  const users = JSON.parse(localStorage.getItem('fooditNewStorage') || '{}');
   const user = users[currentUser];
   if (!user) {
     alert('User data not found.');
