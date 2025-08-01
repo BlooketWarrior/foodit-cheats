@@ -63,7 +63,7 @@
           { name: "Noodles", img: "https://i.postimg.cc/18p32ypV/noodles.png", rarity: "rare", chance: 20 },
           { name: "Octayden", img: "https://i.postimg.cc/7GB69XSB/octayden.png", rarity: "rare", chance: 20 },
           { name: "Ayden", img: "https://i.postimg.cc/mt1D3Ykw/ayden.png", rarity: "rare", chance: 20 },
-          { name: "Fasty Jay", img: "https://i.postimg.cc/7CkfZ5xN/FastyJay.png", rarity: "epic", chance: 5 },
+          { name: "Fasty Jay", img: "https://i.postimg.cc/CxdBTLqj/Untitled-design-13.png", rarity: "epic", chance: 5 },
           { name: "Mystical", img: "https://i.postimg.cc/zymfxyR1/mystical.png", rarity: "epic", chance: 4 },
           { name: "Panda Flame", img: "https://i.postimg.cc/hXxXnLqj/panda-Flame.png", rarity: "legendary", chance: 3 },
           { name: "Spork", img: "https://i.postimg.cc/cKB6gdCG/spork.png", rarity: "legendary", chance: 2 },
