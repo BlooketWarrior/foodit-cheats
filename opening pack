@@ -15,7 +15,8 @@
   const PACK_COST = {
     milk: 30,
     space: 30,
-    school: 50
+    school: 50,
+    og: 30
   };
 
   const milkPack = [
@@ -55,7 +56,25 @@
     { name: "Teachers Desk", img: "https://i.postimg.cc/tsScr19j/teachers-Desk.png", rarity: "chroma", chance: 0.8 },
   ];
 
-  const packs = { milk: milkPack, space: spacePack, school: schoolPack };
+ const ogPack = [
+     { name: "Bagel Penguin", img: "https://i.postimg.cc/Fk7KBcZh/bagel-Penguin.png", rarity: "uncommon", chance: 30 },
+          { name: "Chip", img: "https://i.postimg.cc/8FNzVxHK/chip.png", rarity: "uncommon", chance: 30 },
+          { name: "History Penguin", img: "https://i.postimg.cc/xq48bxf8/History-Penguin.png", rarity: "uncommon", chance: 30 },
+          { name: "Noodles", img: "https://i.postimg.cc/18p32ypV/noodles.png", rarity: "rare", chance: 20 },
+          { name: "Octayden", img: "https://i.postimg.cc/7GB69XSB/octayden.png", rarity: "rare", chance: 20 },
+          { name: "Ayden", img: "https://i.postimg.cc/mt1D3Ykw/ayden.png", rarity: "rare", chance: 20 },
+          { name: "Fasty Jay", img: "https://i.postimg.cc/7CkfZ5xN/FastyJay.png", rarity: "epic", chance: 5 },
+          { name: "Mystical", img: "https://i.postimg.cc/zymfxyR1/mystical.png", rarity: "epic", chance: 4 },
+          { name: "Panda Flame", img: "https://i.postimg.cc/hXxXnLqj/panda-Flame.png", rarity: "legendary", chance: 3 },
+          { name: "Spork", img: "https://i.postimg.cc/cKB6gdCG/spork.png", rarity: "legendary", chance: 2 },
+          { name: "SpeedGoodAlr", img: "https://i.postimg.cc/t7T7JQH8/speed-Good-Alr.png", rarity: "chroma", chance: 1 },
+          { name: "Caterpillar9", img: "https://i.postimg.cc/KkcjtC3k/caterpillar9.png", rarity: "chroma", chance: 1 },
+          { name: "Glitch", img: "https://i.postimg.cc/YqsCRP7q/glitch.webp", rarity: "unique", chance: 0.7 },
+          { name: "SOUNDGOD", img: "https://i.postimg.cc/R3dVCGpM/SOUNDGOD.gif", rarity: "mystical", chance: 0.4 },
+          { name: "Blooket Warrior", img: "https://i.postimg.cc/htNhD5Z3/Blooket-Warrior.gif", rarity: "heavenly", chance: 0.2 },
+        ]
+
+  const packs = { milk: milkPack, space: spacePack, school: schoolPack, og: ogPack };
 
   // UI setup
   const ui = document.createElement('div');
