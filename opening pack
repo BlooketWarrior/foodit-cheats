@@ -100,6 +100,7 @@
         <option value="milk">Milk</option>
         <option value="space">Space</option>
         <option value="school">School</option>
+        <option value="og">OG</option>
       </select>
     </label><br><br>
     <label>Amount:
