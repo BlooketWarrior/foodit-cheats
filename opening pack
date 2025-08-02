@@ -70,7 +70,7 @@
           { name: "Spork", img: "https://i.postimg.cc/cKB6gdCG/spork.png", rarity: "legendary", chance: 2 },
           { name: "SpeedGoodAlr", img: "https://i.postimg.cc/t7T7JQH8/speed-Good-Alr.png", rarity: "chroma", chance: 1 },
           { name: "Caterpillar9", img: "https://i.postimg.cc/KkcjtC3k/caterpillar9.png", rarity: "chroma", chance: 1 },
-          { name: "Allon Me", img: "https://i.postimg.cc/qRP5Yhfb/allonme.png", rarity: "chroma", chance: 1 },
+          { name: "Allonme", img: "https://i.postimg.cc/qRP5Yhfb/allonme.png", rarity: "chroma", chance: 1 },
           { name: "Glitch", img: "https://i.postimg.cc/YqsCRP7q/glitch.webp", rarity: "unique", chance: 0.7 },
           { name: "SOUNDGOD", img: "https://i.postimg.cc/R3dVCGpM/SOUNDGOD.gif", rarity: "mystical", chance: 0.4 },
           { name: "Blooket Warrior", img: "https://i.postimg.cc/htNhD5Z3/Blooket-Warrior.gif", rarity: "heavenly", chance: 0.2 },
