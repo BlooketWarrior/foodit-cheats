@@ -25,11 +25,11 @@
     { name: "Blueberry Milk", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fthumbnails_blueberryMilk.png?1750440387664", rarity: "rare", chance: 15 },
     { name: "Grape Milk", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fthumbnails_grapeMilk.png?1750440406384", rarity: "rare", chance: 10 },
     { name: "Chocolate Milk", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fthumbnails_chocolateMilk.png?1750440422676", rarity: "epic", chance: 8 },
-    { name: "Bubble Gum Milk", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fthumbnails_bubblegumMilk.png?1750440430356", rarity: "chroma", chance: 0.7 },
+    { name: "Bubble Gum Milk", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fthumbnails_bubblegumMilk.png?1750440430356", rarity: "chroma", chance: 0.07 },
     { name: "Warriet Milk", img: "https://i.postimg.cc/wB35wMNV/Warriet-Milk.png", rarity: "legendary", chance: 1 },
-    { name: "Cat Milk", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2FcatMilk.png?1750455696008", rarity: "unique", chance: 0.3 },
-    { name: "Dog Milk", img: "https://i.postimg.cc/MKxMpJnF/dogMilk.png", rarity: "unique", chance: 0.2 },
-    { name: "Cotton Candy Milk", img: "https://i.postimg.cc/mhWPz0Px/cottoncandy-Milk.png", rarity: "chroma", chance: 0.4 },
+    { name: "Cat Milk", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2FcatMilk.png?1750455696008", rarity: "unique", chance: 0.03 },
+    { name: "Dog Milk", img: "https://i.postimg.cc/MKxMpJnF/dogMilk.png", rarity: "unique", chance: 0.02 },
+    { name: "Cotton Candy Milk", img: "https://i.postimg.cc/mhWPz0Px/cottoncandy-Milk.png", rarity: "chroma", chance: 0.04 },
   ];
 
   const spacePack = [
@@ -40,9 +40,9 @@
     { name: "Mars", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fmars.png?1750526570761", rarity: "rare", chance: 10 },
     { name: "Sun", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fsun.png?1750526580706", rarity: "epic", chance: 4 },
     { name: "Astronaut", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fastronaut.png?1750451907761", rarity: "legendary", chance: 3 },
-    { name: "Meteoroids", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fmeteoroids.png?1750526681842", rarity: "chroma", chance: 1 },
-    { name: "Rainbow Saturn", img: "https://i.postimg.cc/RVW0BYps/rainbow-Saturn.gif", rarity: "mystical", chance: 0.7 },
-    { name: "Constellation", img: "https://i.postimg.cc/Cxfdj2jB/constellation.gif", rarity: "heavenly", chance: 0.2 },
+    { name: "Meteoroids", img: "https://cdn.glitch.global/36ec2602-304b-444b-8f2f-08c65c92bbc0/thumbnails%2Fmeteoroids.png?1750526681842", rarity: "chroma", chance: 0.01 },
+    { name: "Rainbow Saturn", img: "https://i.postimg.cc/RVW0BYps/rainbow-Saturn.gif", rarity: "mystical", chance: 0.007 },
+    { name: "Constellation", img: "https://i.postimg.cc/Cxfdj2jB/constellation.gif", rarity: "heavenly", chance: 0.0002 },
   ];
 
   const schoolPack = [
@@ -54,7 +54,7 @@
     { name: "Crayons", img: "https://i.postimg.cc/Vd4Z6SrC/crayons.png", rarity: "epic", chance: 4 },
     { name: "Teachers Cup", img: "https://i.postimg.cc/8JWnPtMp/teachers-Cup.png", rarity: "legendary", chance: 3 },
     { name: "Chalkboard", img: "https://i.postimg.cc/H8gvJX9Q/chalkboard.png", rarity: "legendary", chance: 2 },
-    { name: "Teachers Desk", img: "https://i.postimg.cc/tsScr19j/teachers-Desk.png", rarity: "chroma", chance: 0.8 },
+    { name: "Teachers Desk", img: "https://i.postimg.cc/tsScr19j/teachers-Desk.png", rarity: "chroma", chance: 0.08 },
   ];
 
  const ogPack = [
@@ -68,12 +68,12 @@
           { name: "Mystical", img: "https://i.postimg.cc/zymfxyR1/mystical.png", rarity: "epic", chance: 4 },
           { name: "Panda Flame", img: "https://i.postimg.cc/8cKptMwx/Screen-Shot-2025-08-01-at-6-49-29-AM.webp", rarity: "legendary", chance: 3 },
           { name: "Spork", img: "https://i.postimg.cc/cKB6gdCG/spork.png", rarity: "legendary", chance: 2 },
-          { name: "SpeedGoodAlr", img: "https://i.postimg.cc/t7T7JQH8/speed-Good-Alr.png", rarity: "chroma", chance: 1 },
-          { name: "Caterpillar9", img: "https://i.postimg.cc/KkcjtC3k/caterpillar9.png", rarity: "chroma", chance: 1 },
-          { name: "Allonme", img: "https://i.postimg.cc/qRP5Yhfb/allonme.png", rarity: "chroma", chance: 1 },
-          { name: "Glitch", img: "https://i.postimg.cc/YqsCRP7q/glitch.webp", rarity: "unique", chance: 0.7 },
-          { name: "SOUNDGOD", img: "https://i.postimg.cc/R3dVCGpM/SOUNDGOD.gif", rarity: "mystical", chance: 0.4 },
-          { name: "Blooket Warrior", img: "https://i.postimg.cc/htNhD5Z3/Blooket-Warrior.gif", rarity: "heavenly", chance: 0.2 },
+          { name: "SpeedGoodAlr", img: "https://i.postimg.cc/t7T7JQH8/speed-Good-Alr.png", rarity: "chroma", chance: 0.07 },
+          { name: "Caterpillar9", img: "https://i.postimg.cc/KkcjtC3k/caterpillar9.png", rarity: "chroma", chance: 0.06 },
+          { name: "Allonme", img: "https://i.postimg.cc/qRP5Yhfb/allonme.png", rarity: "chroma", chance: 0.05 },
+          { name: "Glitch", img: "https://i.postimg.cc/YqsCRP7q/glitch.webp", rarity: "unique", chance: 0.01 },
+          { name: "SOUNDGOD", img: "https://i.postimg.cc/R3dVCGpM/SOUNDGOD.gif", rarity: "mystical", chance: 0.004 },
+          { name: "Blooket Warrior", img: "https://i.postimg.cc/htNhD5Z3/Blooket-Warrior.gif", rarity: "heavenly", chance: 0.0002 },
         ]
 
   const packs = { milk: milkPack, space: spacePack, school: schoolPack, og: ogPack };
