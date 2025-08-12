@@ -75,8 +75,20 @@
           { name: "SOUNDGOD", img: "https://i.postimg.cc/R3dVCGpM/SOUNDGOD.gif", rarity: "mystical", chance: 0.004 },
           { name: "Blooket Warrior", img: "https://i.postimg.cc/htNhD5Z3/Blooket-Warrior.gif", rarity: "heavenly", chance: 0.0002 },
         ]
+const donutPack = [
+      { name: "Glaze Donut", img: "https://i.postimg.cc/W4GVHFd7/Glaze-Donut.webp", rarity: "uncommon", chance: 30 },
+      { name: "Strawberry Glazed Donut", img: "https://i.postimg.cc/B6Sr7h9q/Strawberry-Glazed-Donut.webp", rarity: "uncommon", chance: 25 },
+      { name: "Chocolate Glazed Donut", img: "https://i.postimg.cc/tgXv9Yrk/Chocolate-Glazed-Donut.webp", rarity: "uncommon", chance: 20 },
+      { name: "Blueberry Donut", img: "https://i.postimg.cc/HxN603Tv/Blueberry-Donut-1.webp", rarity: "rare", chance: 10 },
+      { name: "Blackberry Donut", img: "https://i.postimg.cc/mZvsBy7S/Blackberry-Donut.webp", rarity: "rare", chance: 10 },
+      { name: "Boston Creme", img: "https://i.postimg.cc/4x4FgY25/Boston-Creme.webp", rarity: "epic", chance: 5 },
+      { name: "Donut Hole", img: "https://i.postimg.cc/6qYnLpVW/Donut-Holes.webp", rarity: "legendary", chance: 1 },
+      { name: "Space Donut", img: "https://i.postimg.cc/CL9zy8Ky/Space-Donut.webp", rarity: "chroma", chance: 0.05 },
+      { name: "Iced Blue Donut", img: "https://i.postimg.cc/GpCtt1Yq/Iced-Blue-Donut.webp", rarity: "chroma", chance: 0.05 },
+      { name: "Mystery Donut", img: "https://i.postimg.cc/25RG532M/mystery-Donut-swing-smooth.gif", rarity: "mystical", chance: 0.005 },
+    ];
 
-  const packs = { milk: milkPack, space: spacePack, school: schoolPack, og: ogPack };
+  const packs = { milk: milkPack, space: spacePack, school: schoolPack, og: ogPack, donut: donutPack };
 
   // UI setup
   const ui = document.createElement('div');
@@ -103,6 +115,7 @@
         <option value="space">Space</option>
         <option value="school">School</option>
         <option value="og">OG</option>
+        <option value="donut">Donut</option>
       </select>
     </label><br><br>
     <label>Amount:
