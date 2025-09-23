@@ -31,6 +31,7 @@
       { name: "Dog Milk", img: "https://i.postimg.cc/MKxMpJnF/dogMilk.png", rarity: "unique", chance: 0.03 },
       { name: "Cotton Candy Milk", img: "https://i.postimg.cc/mhWPz0Px/cottoncandy-Milk.png", rarity: "chroma", chance: 0.05 },
       { name: "Space Milk", img: "https://i.postimg.cc/9QKJFHgQ/spacemilk.png", rarity: "chroma", chance: 0.05 },
+{ name: "Pumpkin Spice Milk", img: "https://i.postimg.cc/xd6V9tjQ/pumpkin-Spicemilk.png", rarity: "chroma", chance: 0.05 },
     ];
     
     const tokenPack = [
